@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  --bg-color: white;
+  --ff-color: #E1E1E6;
+}
+
+nav {
+  display: flex;
+  gap: 10rem;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+
+}
+a{
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rem;
+
+  font-size: 4.8rem;
+  color: var(--bg-color);
+  
+} 
+
+button {
+  margin-top: 2.4rem;
+  font-size: 1.4rem;
+  padding: 1.2rem 3.2rem;
+  color: var(--bg-color);
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover {
+  background-image:
+  linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+    );
+  animation: slidebg 2s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.follow{
+  margin-top: 40px;
+}
+
+.follow a{
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+nav a:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: var(--bg-color);
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+}
+
+nav a:hover:before,
+nav a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+nav a:before {
+  background: var(--bg-color);
+  box-shadow: 0 0 30px 2px var(--bg-color);
+}
+
+/* ======================= BODYs ====================*/
+
+html, body {
+  min-height: 100vh;
+  max-width: auto;
+  background-color: #040b12;
+}
+
+/* ======================= UNIVERSE ====================*/
+.universe h1 {
+  font-size: 4.8rem;
+  line-height: 100%;
+  position: absolute;
+  width: 296px;
+  height: 60px;
+  left: 10.2rem;
+  top: 185px;
+  color: var(--ff-color);
+}
+
+.universe p {
+  position: absolute;
+  width: 648px;
+  height: 203px;
+  left: 10.2rem;
+  top: 261px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--ff-color);
+}
+
+/* ======================= EXPLORER ====================*/
+.explorer h1 {
+  font-size: 4.8rem;
+  line-height: 125%;
+  position: absolute;
+  width: 236px;
+  height: 60px;
+  left: 10.2rem;
+  top: 185px;
+  color: var(--ff-color);
+}
+
+.explorer p {
+  position: absolute;
+  width: 648px;
+  height: 203px;
+  left: 10.2rem;
+  top: 261px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--ff-color);
+}
+
+/* ======================= 404 ====================*/
+.error h1 {
+  margin-top: 20rem;
+  font-size: 4.8rem;
+  line-height: 125%;
+  position: absolute;
+  width: 800px;
+  height: 60px;
+  left: 10.2rem;
+  top: 185px;
+  color: var(--ff-color);
+}
+
+.error span {
+  margin-top: 26rem;
+  font-size: 1.8rem;
+  line-height: 125%;
+  position: absolute;
+  width: 800px;
+  height: 60px;
+  left: 10.2rem;
+  top: 185px;
+  color: var(--ff-color);
+}
+
+
+
+/*=========================== STAR EFFECT =============================*/
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+  z-index: 2;
+}
+.page:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url("https://imgur.com/B2VVbTo.png");
+	background-size: cover;
+	animation: stars 10s linear infinite alternate;
+  z-index: -1;
+}
+.page:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url("https://imgur.com/OzQPJqM.png");
+	background-size: cover;
+	animation: stars 20s linear infinite alternate;
+  z-index: -1;
+}
+
+@keyframes stars {
+	0% {
+		-webkit-transform: rotate(-14deg);
+		transform: rotate(-14deg);
+	}
+	100% {
+		-webkit-transform: rotate(14deg);
+		transform: rotate(14deg);
+	}
+}
+
+    
+
+
+/*
+.page {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, rgba(1,0,22,1) 0%, rgba(11,11,14,1) 35%, rgba(82,121,129,1) 100%);
+}
+.stars{
+  position: relative;
+	width: 3px;
+	height: 3px;
+  
+	border-radius: 50%;
+  box-shadow: 
+  50px 30px white,
+  100px 80px white,
+  80px 120px white,
+  300px 20px white,
+  250px 130px white,
+  200px 50px white,
+  150px 100px white,
+  320px 100px white;
+  animation: anim-stars 40s linear infinite;
+}
+
+@keyframes anim-stars {
+  from {
+      transform: translateY(1000px);
+  }
+  to {
+      transform: translateY(-100px);
+  }
+}
+.stars::after{
+  content: " ";
+  position: absolute;
+  top: 150px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 50px 30px white,
+    100px 80px white,
+    80px 120px white,
+    300px 20px white,
+    250px 130px white,
+    200px 50px white,
+    150px 100px white,
+    320px 100px white;
+}
+
+.stars2{
+  position: relative;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  box-shadow: 15px 15px white,
+    125px 35px white,
+    50px 80px white,
+    10px 120px white,
+    275px 90px white,
+    230px 10px white,
+    120px 130px white,
+    300px 130px white,
+    220px 115px white;
+  animation: anim-stars 40s linear infinite;
+}
+
+.stars2::after{
+  content: " ";
+  position: absolute;
+  top: 150px;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  box-shadow: 15px 15px white,
+    125px 35px white,
+    50px 80px white,
+    10px 120px white,
+    275px 90px white,
+    230px 10px white,
+    120px 130px white,
+    300px 130px white,
+    220px 115px white;
+}
+*/
