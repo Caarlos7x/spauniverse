@@ -2,13 +2,12 @@
 
 <img height="300px" src="https://i.imgur.com/ddeqyNj.gif">
 
-Página para salvar perfis favoritos do Github.
 
 [Projeto original do Figma](https://www.figma.com/file/0Rfxra0yofTpn2uly5lbHa/%5BDesafios-Explorer%5D-SPA-Universe-(Copy)?node-id=30%3A1155)
 
 Deploy: 
 
-## 🚀 Começando -
+## 🚀 Começando
 
 ### 📋 Pré-requisitos
 
